@@ -10,7 +10,7 @@ const Login: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://tsbackend-1xq6.onrender.com:10000/api/auth/login', { email, password });
+      const response = await axios.post('https://tsbackend-1xq6.onrender.com/api/auth/login', { email, password });
       login(response.data.user, response.data.token);
     } catch (error) {
       console.error('Login failed:', error);
